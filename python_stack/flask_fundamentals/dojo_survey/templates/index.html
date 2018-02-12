@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1>Enter a Valid(Any) Name!</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div>
+            <form action="/results" id="usrform" method="post">
+                Name:<br>
+                <input type="text" name="name">
+                <br>
+                Email:<br>
+                <input type="text" name="email">
+                <br><br>
+                Please select the location of your school.
+                <br>
+                <select name="location">
+                    <option value="seattle">Seattle</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="san jose">San Jose</option>
+                    <option value="dc">D.C.</option>
+                  </select>
+                  <br><br>
+                  Comment Optional
+                  <br>
+                  <textarea name="comment" form="usrform">Enter comment here...</textarea>
+                  <br>
+                <input type="submit" value="Submit">
+            </form> 
+
+            <p>If you click the "Submit" button, nothing will happen, unless i did
+                it right. Than something will happen. Or not.
+            </p>
+        </div>
+
+        
+
+    </body>
+</html>

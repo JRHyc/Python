@@ -1,0 +1,22 @@
+.economy{
+    border: purple solid 4px;
+    width: 200px;
+    display: inline-block;
+    margin: 50px 0px 0px 20px;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+}
+#reset{
+    color: purple;
+    float: right;
+    margin: 20px 20px 0px 0px;
+}
+#activity{
+    background-color: black;
+    color: green;
+    height: 200px;
+    padding: 0px 0px 0px 0px
+}
+h2{
+    color: green;
+}

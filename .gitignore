@@ -1,2 +1,2 @@
 # Ignoring virtual environments #
-myEnvironments/*
+python_stack/myEnvironments/*

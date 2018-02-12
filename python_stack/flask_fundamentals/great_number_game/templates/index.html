@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
+    </head>
+    <body>
+        <h1>Guess the number from 1 to 100!</h1>
+        <br>
+        <form action="/guess_num" method="post">
+            Guess a number:
+            <input type="text" name="guess_num">
+            <input type="submit">
+        </form>
+        <br><br>
+        <p>
+            Your guess: {{guess_num}}
+            <br>
+            You are: {{result}}
+        </p>
+        <form action="/reset" method="post">
+            <button>Reset Number!</button>
+        </form>
+
+    </body>
+</html>
