@@ -33,7 +33,7 @@ def process_money():
             result = "you broke even! Atleast it was fun!!"
     
     session['gold'] += spin
-    session['message'] = "  " + "|" + "  " + result + session['message']
+    session['message'] = "  " + "</p><br /><p>"   + result + session['message']
     
     return redirect('/')
 
