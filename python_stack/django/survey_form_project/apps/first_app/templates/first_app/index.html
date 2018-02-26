@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a placeholder index page</h1>
+    <div>
+        <form action="/process" method="POST">
+            {% csrf_token %}
+            Name:
+            <input type="text" name="name">
+            <br><br>
+            Dojo Location:
+            <select name="dojo_location">
+                <option value="seattle">Seattle</option>
+                <option value="san_jose">San Jose</option>
+                <option value="chicago">Chicago</option>
+                <option value="dc">D.C.</option>
+            </select>
+            <br><br>
+            Favorite Language:
+            <select name="favorite_language">
+                <option value="python">Python</option>
+                <option value="mean">Mean</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+            </select>
+            <br><br>
+            It won't be read... but you can leave a comment!
+            <br><br>
+            <textarea name="comment"></textarea>
+            <br><br>
+            <input type="submit" value="submit">
+
+        </form>
+    </div>
+</body>
+</html>

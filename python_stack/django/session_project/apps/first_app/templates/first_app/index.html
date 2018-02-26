@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/word" name="word" method="post">
+            {% csrf_token %}
+            Add a new word:
+            <br>
+            <input type="text" name="add_word">
+            <br><br>
+            <input type="radio" name="color" value="red" checked> Red<br>
+            <input type="radio" name="color" value="green"> Green<br>
+            <input type="radio" name="color" value="blue"> Blue<br>
+            <br>
+            <input type="checkbox" name="phat" value="phat" checked>Big Font?<br>
+            <br><br>
+            <input type="submit" value="Add to Session!">
+            <br><br>
+        </form>
+           
+        <textarea id="ledger" name="ledger" rows="50" cols="50">
+            {{request.session.add_word}}
+            {{request.session.color}}
+            {{request.session.phat}}
+        </textarea>
+            
+            
+            
+        
+    </div>
+</body>
+</html>

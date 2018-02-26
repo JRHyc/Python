@@ -17,11 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^', include('apps.first_app.urls')),
-    url(r'^new/', include('apps.first_app.urls')),
-    url(r'^create/', include('apps.first_app.urls')),
-    url(r'^show/', include('apps.first_app.urls')),
-    url(r'^edit/', include('apps.first_app.urls')),
-    url(r'^delete/', include('apps.first_app.urls')),
+    url(r'^$', include('apps.first_app.urls')),
+    url(r'^blogs/', include('apps.first_app.urls')),
+    url(r'^surveys/', include('apps.surveys_app.urls')),
+    url(r'^', include('apps.users_app.urls')),
+    url(r'^users/', include('apps.users_app.urls')),
+    
 
 ]

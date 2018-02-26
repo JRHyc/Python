@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello!
+        I am the index page placeholder.
+    </h1>
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+            {% for u in search%}
+            <tr>
+                <td>{{u.id}}</td>
+                <td>{{u.first_name}} {{u.last_name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.created_at}}</td>
+                <td>
+                    <a href="/show/{{u.id}}"> Show</a>
+                    <a href="/edit/{{u.id}}"> Edit</a>
+                    <a href="/destroy/{{u.id}}"> Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+        <a href="/users/new"> Add a new user.</a>
+    </div>
+</body>
+</html>

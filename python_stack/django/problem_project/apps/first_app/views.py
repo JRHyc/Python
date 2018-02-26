@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponse, redirect
 
 def index(request):
-    response = "Hello, I am your first request!"
+    response = "Hello, I am your first request from the blogs app!"
     return HttpResponse(response)
 
 def new(request):
